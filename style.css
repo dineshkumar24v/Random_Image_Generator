@@ -8,14 +8,28 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* background-color: rgb(231, 152, 130); */
     background: linear-gradient(rgb(249, 48, 48),rgb(245, 245, 120));
+}
+.headC{
+    display: flex;
+    margin: 9px;
+}
+h1{
+    margin: 10px;
+    color: rgb(8, 8, 42);
+}
+img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 10px;
 }
 .img-container {
     text-align: center;
     padding-left:2%;
     padding-right: 2%;
     margin: 1rem;
+    
 }
 .img-container img {
     margin: .8rem;
@@ -24,6 +38,14 @@ body {
     height: 300px;
     background-color: lightgray;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+    opacity: 0; /* Start with opacity 0 for fade-in effect */
+    transform: scale(0.8); /* Optional: Start with smaller size */
+    transition: all 0.5s ease; /* Smooth animation for opacity and scale */
+}
+.img-container img.show {
+    opacity: 1; /* Fully visible */
+    transform: scale(1); /* Back to normal size */
 }
 .btn {
     padding: 10px 20px;
